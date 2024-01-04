@@ -5,19 +5,36 @@ export default class Busca extends Component {
 
     state = {
         termoDeBusca1: '',
+<<<<<<< HEAD
+=======
+        termoDeBusca2: '',
+>>>>>>> 011312d5750e409ae680354d5bcc999303d0b70a
         termoConcatenado: '',
     }
     onTermoAlterado = (event) => {
         console.log(event.target.value)
         this.setState({ termoDeBusca1: event.target.value })
     }
+<<<<<<< HEAD
+=======
+    onTermo2Alterado = (event) => {
+        console.log(event.target.value)
+        this.setState({ termoDeBusca2: event.target.value })
+    }
+>>>>>>> 011312d5750e409ae680354d5bcc999303d0b70a
 
     onFormSubmit = (event) => {
         // Não deixa o navegador submeter o form
         event.preventDefault();
+<<<<<<< HEAD
         this.props.onBuscaRealizada(this.state.termoDeBusca1)
     //    this.setState({ termoConcatenado });   
         const termoConcatenado = `Inflação 12m ${this.state.termoDeBusca1} A meta de inflação é  3% aa, a Selic é 11,75% aa fazer um texto breve no modelo das Atas do Banco Central do Brasil.`;
+=======
+        const termoConcatenado = `Inflação 12m ${this.state.termoDeBusca1} & Taxa de Juros Real 12M ${this.state.termoDeBusca2} fazer um texto breve no modelo das Atas do Banco Central do Brasil por meio de seu Comite de Politicas Monetaria destacando as variáveis indicadas`;
+        this.setState({ termoConcatenado });   
+        this.props.onBuscaRealizada(this.state.termoConcatenado)
+>>>>>>> 011312d5750e409ae680354d5bcc999303d0b70a
         console.log(termoConcatenado);
       };
 
@@ -39,6 +56,20 @@ export default class Busca extends Component {
                         />
                     </span>
                     <div className="flex flex-column mt-2">
+<<<<<<< HEAD
+=======
+                        {/* ícone à esquerda, largura máxima */}
+                        <span className="p-input-icon-left w-full">
+                            <i className="pi pi-money-bill" />
+                            <InputText
+                                //largura máxima
+                                value={this.state.termoDeBusca2}
+                                className="w-full"
+                                onChange={this.onTermoAlterado2}
+                                placeholder={this.props.dica2}
+                            />
+                        </span>
+>>>>>>> 011312d5750e409ae680354d5bcc999303d0b70a
                         <Button
                             label="     Enviar Informação para AI"
                             className="p-button-outlined mt-2 pi pi-prime"
@@ -51,4 +82,8 @@ export default class Busca extends Component {
 }
 Busca.defaultProps = {
     dica: 'Inflação 12m',
+<<<<<<< HEAD
+=======
+    dica2: 'Taxa de Juros Real 12m'
+>>>>>>> 011312d5750e409ae680354d5bcc999303d0b70a
 }

@@ -5,13 +5,8 @@ import openAI from '../utils/openAI'
 export default class App extends React.Component {
     
 state = {
-<<<<<<< HEAD
     resposta:''
 }
-
-    //  onBuscaRealizada = (termo) => {
-    //Console.log(termo)
-    //    openAI.post('/submeta-o-prompt',{this.state.termoConcatenado})}
 
     onBuscaRealizada = (busca) => {
         console.log(busca)
@@ -27,16 +22,6 @@ state = {
         });
       }
       
-=======
-    analise:''
-}
-
-    onBuscaRealizada = (termo) => {
-        console.log(termo)
-        openAI.post('/submeta-o-prompt',{this.state.termoConcatenado})
-        
-    }       
->>>>>>> 011312d5750e409ae680354d5bcc999303d0b70a
     render() {
         return (
             <div className="grid justify-content-center m-auto w-9 borderround border-1 border-400">
@@ -48,10 +33,7 @@ state = {
                     onBuscaRealizada={this.onBuscaRealizada} 
                     />
                 </div>
-<<<<<<< HEAD
                 <div>{this.state.resposta}</div>
-=======
->>>>>>> 011312d5750e409ae680354d5bcc999303d0b70a
             </div>
         )
     }

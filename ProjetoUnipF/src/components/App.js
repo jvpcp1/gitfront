@@ -11,7 +11,7 @@ state = {
     onBuscaRealizada = (busca) => {
         console.log(busca)
         //    this.setState({receita: '', buscando: 'sim'})
-        openAI.post('/pergunte-ao-chatgpt',{ prompt: busca})
+        openAI.post('/pergunte-ao-chatgpt',{ prompt: busca + 'é a inflação atual, a meta de inflação é  3% aa, a Selic é 11,75% aa fazer um texto breve no modelo das Atas do Banco Central do Brasil.'})
         .then(result => {
           this.setState({resposta: result.data.completion})
           console.log(result.data.completion)
